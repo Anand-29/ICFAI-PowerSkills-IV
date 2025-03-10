@@ -1,5 +1,13 @@
 import java.util.*;
-abstract class Ab{
+interface interface1{
+    //by default all the members are final and abstract
+    int a=10; //final
+    void fun1(); //final and abstract
+}
+interface interface2 extends interface1{
+    
+} 
+abstract class Ab implements interface1,interface2{ //multiple inherit
     abstract void fun(); //hide the implemntaion
     //implementation should be given in the derived class
     //abstract class can only be delared inside abstract class
@@ -20,6 +28,10 @@ abstract class Ab{
     }
     //overiden method for Ab class of Main class
     public void overide(){
+        System.out.print("hello");
+    }
+    //implementation of the methon form interface1
+    public void fun1(){
         System.out.print("hello");
     }
 }
