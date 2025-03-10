@@ -5,7 +5,9 @@ interface interface1{
     void fun1(); //final and abstract
 }
 interface interface2 extends interface1{
-    
+   //you cannot create objects of interface
+   //only contains abstract methods,method implementation must
+   //be given in the derived class
 } 
 abstract class Ab implements interface1,interface2{ //multiple inherit
     abstract void fun(); //hide the implemntaion
