@@ -190,6 +190,52 @@ public class Main{
         for(Map.Entry<Integer,String> e: tm.entrySet()){
             System.out.print(e.getKey()+" "+e.getValue());
         }
+//3.
+    LinkedHashMap<Integer,String> lm=new LinkedHashMap<Integer,String>();
+    //        key   value
+    //no duplicates,ordered,key-value pairs
+    //same like array index and their values but you can set your 
+    //own keys ( put() , get() )
+    lm.put(1,"A");
+    lm.put(2,"B");
+    lm.put(3,"C");
+    //remove- objectname.remove(key),the key and value will be removed
+    lm.remove(2);
+    //update set(key,new value)
+    lm.put(1,"D");
+    //print all the data
+    //1.use keyset() or values()
+        for(int i:lm.keySet())
+            System.out.print(i+" "+lm.get(i)); //get-acess value of a key
+        for(String i:lm.values())
+            System.out.print(i);
+    //2.use enterset()- contains all the data of map
+        for(Map.Entry<Integer,String> e: lm.entrySet()){
+            System.out.print(e.getKey()+" "+e.getValue());
+        }
+//4.
+    Hashtable<Integer,String> ht=new Hashtable<Integer,String>();
+    //        key   value
+    //uses an hashcode(encrypt and decrypt) to store and retrive
+    //same like array index and their values but you can set your 
+    //own keys ( put() , get() )
+    ht.put(1,"A");
+    ht.put(2,"B");
+    ht.put(3,"C");
+    //remove- objectname.remove(key),the key and value will be removed
+    ht.remove(2);
+    //update set(key,new value)
+    ht.put(1,"D");
+    //print all the data
+    //1.use keyset() or values()
+        for(int i:ht.keySet())
+            System.out.print(i+" "+lm.get(i)); //get-acess value of a key
+        for(String i:ht.values())
+            System.out.print(i);
+    //2.use enterset()- contains all the data of map
+        for(Map.Entry<Integer,String> e: ht.entrySet()){
+            System.out.print(e.getKey()+" "+e.getValue());
+        }
 //few more methods
 System.out.print(hm.size());
 System.out.print(hm.containsKey(1)+" "+hm.containsValue("A"));
