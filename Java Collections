@@ -1,0 +1,197 @@
+//Collections()
+import java.util.*;
+public class Main{
+    public static void main(String arg[]){
+//List 
+//1.
+    ArrayList<Integer> al=new ArrayList<Integer>();
+    //works same as array/size is not fixed
+    //add the data
+    al.add(1);
+    al.add(2);
+    al.add(3);
+    //delete
+    al.remove(2);
+    //update set(index,new data)
+    al.set(1,6);
+    //print all the data
+    for(int i:al)
+        System.out.print(i+" ");
+//2.
+    LinkedList<Integer> ll=new LinkedList<Integer>();
+    //add the data
+    ll.add(1);
+    ll.add(2);
+    ll.add(3);
+    //delete
+    ll.remove(2);
+    //update set(index,new data)
+    ll.set(1,6);
+    //print all the data
+    for(int i:ll)
+        System.out.print(i+" ");
+//3.
+    Vector<Integer> v=new Vector<Integer>();
+    //works same as array/size is not fixed
+    //add the data
+    v.add(1);
+    v.add(2);
+    v.add(3);
+    //delete
+    v.remove(2);
+    //update set(index,new data)
+    v.set(1,6);
+    //print all the data
+    for(int i:v)
+        System.out.print(i+" ");
+//4.
+    Stack<Integer> s=new Stack<Integer>(); //LIFO
+    //add the data
+    s.push(1);
+    s.push(2);
+    s.push(3);
+    //access top data,prints the top data dosen't remove the data
+    s.peek();
+    //delete,prints and delets the top data
+    int ans=s.pop();
+    //print all the data
+    while(!s.isEmpty())
+        System.out.print(s.pop()+" ");
+//5.    
+    PriorityQueue<Integer> q=new PriorityQueue<Integer>();
+    //add the data
+    q.add(1);
+    q.add(2);
+    q.add(3);
+    //access the top data,prints the top data dosen't remove the data
+    q.peek();
+    //delete,prints and delets the top data
+    ans=q.poll();
+    //print all the data
+    while(!q.isEmpty())
+        System.out.print(q.poll()+" ");
+//6.
+    Deque<Integer> dq=new ArrayDeque<Integer>();
+    //add and delete in both ways
+    dq.add(1);
+    dq.add(2);
+    dq.add(3);
+    //addfront
+    dq.addFirst(5);
+    //add last
+    dq.addLast(8);
+    //remove
+    dq.removeFirst(); dq.removeLast();
+    //print all the data
+    while(!dq.isEmpty())
+        System.out.print(dq.pop()+" "); //or dq.poll();
+//Set
+//1.
+    HashSet<Integer> h=new HashSet<Integer>();
+    //No duplicates,unordered
+    //add
+    h.add(1);
+    h.add(2);
+    h.add(3);
+    //remove- objectname.remove(data)
+    h.remove(2);
+    //print all the data
+    //1.use iterator
+        Iterator<Integer> itr=h.iterator();
+        while(itr.hasNext()){ //checks for nextdata is present or not
+            System.out.print(itr.next()); //prints the data
+        }
+    //2.use for each
+        for(int i: h){
+            System.out.print(i);
+        }
+//2.
+    LinkedHashSet<Integer> lh=new LinkedHashSet<Integer>();
+    //No duplicates,ordered
+    //add
+    lh.add(1);
+    lh.add(2);
+    lh.add(3);
+    //remove- objectname.remove(data)
+    lh.remove(2);
+    //print all the data
+    //1.use iterator
+        Iterator<Integer> it=lh.iterator();
+        while(itr.hasNext()){ //checks for nextdata is present or not
+            System.out.print(it.next()); //prints the data
+        }
+    //2.use for each
+        for(int i: lh){
+            System.out.print(i);
+        }
+//3.
+    TreeSet<Integer> th=new TreeSet<Integer>();
+    //No duplicates,sorted
+    //add
+    th.add(1);
+    th.add(2);
+    th.add(3);
+    //remove- objectname.remove(data)
+    th.remove(2);
+    //print all the data
+    //1.use iterator
+        Iterator<Integer> iter=th.iterator();
+        while(itr.hasNext()){ //checks for nextdata is present or not
+            System.out.print(iter.next()); //prints the data
+        }
+    //2.use for each
+        for(int i: th){
+            System.out.print(i);
+        }
+//Map
+//1.
+    HashMap<Integer,String> hm=new HashMap<Integer,String>();
+    //        key   value
+    //no duplicates,unordered,key-value pairs
+    //same like array index and their values but you can set your 
+    //own keys ( put() , get() )
+    hm.put(1,"A");
+    hm.put(2,"B");
+    hm.put(3,"C");
+    //remove- objectname.remove(key),the key and value will be removed
+    hm.remove(2);
+    //update set(key,new value)
+    hm.put(1,"D");
+    //print all the data
+    //1.use keyset() or values()
+        for(int i:hm.keySet())
+            System.out.print(i+" "+hm.get(i)); //get-acess value of a key
+        for(String i:hm.values())
+            System.out.print(i);
+    //2.use enterset()- contains all the data of map
+        for(Map.Entry<Integer,String> e: hm.entrySet()){
+            System.out.print(e.getKey()+" "+e.getValue());
+        }
+//2.
+    TreeMap<Integer,String> tm=new TreeMap<Integer,String>();
+    //        key   value
+    //no duplicates,sorted,key-value pairs
+    //same like array index and their values but you can set your 
+    //own keys ( put() , get() )
+    tm.put(1,"A");
+    tm.put(2,"B");
+    tm.put(3,"C");
+    //remove- objectname.remove(key),the key and value will be removed
+    tm.remove(2);
+    //update set(key,new value)
+    tm.put(1,"D");
+    //print all the data
+    //1.use keyset() or values()
+        for(int i:tm.keySet())
+            System.out.print(i+" "+tm.get(i)); //get-acess value of a key
+        for(String i:tm.values())
+            System.out.print(i);
+    //2.use enterset()- contains all the data of map
+        for(Map.Entry<Integer,String> e: tm.entrySet()){
+            System.out.print(e.getKey()+" "+e.getValue());
+        }
+//few more methods
+System.out.print(hm.size());
+System.out.print(hm.containsKey(1)+" "+hm.containsValue("A"));
+System.out.print(hm.isEmpty());
+}}
