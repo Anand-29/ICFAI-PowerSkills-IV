@@ -1,0 +1,54 @@
+import java.util.*;
+abstract class Ab{
+    abstract void fun(); //hide the implemntaion
+    //implementation should be given in the derived class
+    //abstract class can only be delared inside abstract class
+    //abstract class can contain normal methods
+    private int a;
+    public void set(int a){
+        this.a=a;  //set the data
+    }
+    public int get(){
+        return this.a;
+    }
+    //overload method
+    public void same(){
+        System.out.print("hello");
+    }
+    public void same(int a){
+        System.out.print(a);
+    }
+    //overiden method for Ab class of Main class
+    public void overide(){
+        System.out.print("hello");
+    }
+}
+public class Main extends Ab{  
+    public static void main(String ar[]){
+    //objects
+    Main ob1=new Main();
+    Main ob2=new Main();
+//Abstraction
+    //data hiding
+    ob1.fun();
+//Encapluation
+    //to access private member
+    //use getter and setter
+    ob1.set(1); //pass the data to be set
+    System.out.print(ob1.get()); //access the data
+    }
+    public void fun(){  //implementation of abstract class
+        System.out.print("Hello");
+    }
+//Inheritance
+    //use (extends) key to inherit the properties of a class(Ab)
+    //use (implements) key to inherit properties from an 
+    //interface to class
+//polymorphism
+    //Override-same method different class
+    //overload-same method different class(different parameters)
+    //override method in main class
+        public void overide(){
+            System.out.print("hello");
+        }
+}
