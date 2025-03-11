@@ -1,4 +1,14 @@
 //Collections()
+*/not a big deal remember the common keywords, to add a data use ".add(the data you want to add)",to remove a data
+use .remove(index),to update use .set(index,new data)
+other common key words 
+A.size(), A being the object name
+A.contains(data);
+A.put(data)- for set
+A.get(index) -still for set
+A.put(key,value)-also same as array index and it's data
+A.put(1,"A")-just giving an example, and yes it's called a map(key-value pairs)
+and how do you get the the data use "A.get(key/index)" it will print the value*/
 import java.util.*;
 public class Main{
     public static void main(String arg[]){
