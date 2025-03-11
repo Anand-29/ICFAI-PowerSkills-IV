@@ -1,20 +1,19 @@
 import java.util.*;
 interface interface1{
     //by default all the members are final and abstract
-    int a=10; //final
+    int a=10; //final(once initaialzed cannot be changed)
     void fun1(); //final and abstract
 }
-interface interface2 extends interface1{
+interface interface2 extends interface1{   //interface to interface-to inherit use extends key word
    //you cannot create objects of interface
-   //only contains abstract methods,method implementation must
-   //be given in the derived class
+   //only contains abstract methods,method implementation must be given in the derived class
 } 
 abstract class Ab implements interface1,interface2{ //multiple inherit
-    abstract void fun(); //hide the implemntaion
+    abstract void fun(); //hide the implemntaion(body or the implementation of the methon must be given in the inherited class)
     //implementation should be given in the derived class
-    //abstract class can only be delared inside abstract class
+    //abstract class can only be delared inside abstract class(not the other way around(if you know what I mean))
     //abstract class can contain normal methods
-    private int a;
+    private int a;    //this is for getter and setter (encapsulation)
     public void set(int a){
         this.a=a;  //set the data
     }
@@ -66,3 +65,4 @@ public class Main extends Ab{
             System.out.print("hello");
         }
 }
+//reference you can just put the keyword and search for it or refer W3schools or GeeksforGeeks or just listen to the class.
